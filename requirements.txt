@@ -1,6 +1,5 @@
 Flask
 Flask-WTF
-Flask-Bootstrap
 WTForms
 Flask-SQLAlchemy
 Werkzeug
