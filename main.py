@@ -1,6 +1,5 @@
 from flask import Flask, render_template, redirect, url_for,session
 from flask_wtf import FlaskForm
-from flask_bootstrap import Bootstrap5
 from flask_wtf.file import FileRequired
 from wtforms import StringField, SubmitField, PasswordField, EmailField,FileField, DateField, IntegerField
 from wtforms.fields.choices import SelectField
@@ -16,7 +15,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
 image_directory = "static/images"
 imagefiles = [f for f in os.listdir(image_directory) if os.path.isfile(os.path.join(image_directory,f))]
-bootstrap = Bootstrap5(app)
 app.secret_key = "yes"
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.db"
